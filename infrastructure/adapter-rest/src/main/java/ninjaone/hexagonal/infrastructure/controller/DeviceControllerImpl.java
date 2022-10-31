@@ -1,0 +1,47 @@
+package ninjaone.hexagonal.infrastructure.controller;
+
+import ninjaone.hexagonal.application.service.api.DeviceService;
+import ninjaone.hexagonal.domain.model.Device;
+import ninjaone.hexagonal.infrastructure.response.ResponseHandler;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class DeviceControllerImpl implements DeviceController{
+
+    private DeviceService deviceService;
+
+    @Autowired
+    public DeviceControllerImpl(DeviceService deviceService) {
+        this.deviceService = deviceService;
+    }
+
+    @Override
+    public ResponseEntity<Object> getDeviceById(Integer deviceId) {
+        try {
+            var device = deviceService.getDeviceById(deviceId);
+
+            if(device == null) return ResponseHandler.generateResponse("Device not found", HttpStatus.NOT_FOUND, null);
+
+            return ResponseHandler.generateResponse("Device found", HttpStatus.OK, deviceService.getDeviceById(deviceId));
+        } catch (Exception error) {
+            return ResponseHandler.generateResponse("There was an error getting the device",
+                    HttpStatus.INTERNAL_SERVER_ERROR, null);
+        }
+    }
+
+    @Override
+    public ResponseEntity<Object> addProduct(Device device) {
+
+        try {
+            deviceService.addProduct(device);
+
+            return ResponseHandler.generateResponse("Added Device", HttpStatus.OK, null);
+        } catch (Exception error) {
+            return ResponseHandler.generateResponse("There was an error adding the device",
+                    HttpStatus.INTERNAL_SERVER_ERROR, null);
+        }
+    }
+}

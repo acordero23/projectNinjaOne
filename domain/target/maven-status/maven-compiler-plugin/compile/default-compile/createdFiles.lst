@@ -1,0 +1,2 @@
+ninjaone\hexagonal\domain\model\Device.class
+ninjaone\hexagonal\domain\spi\DevicePersistencePort.class

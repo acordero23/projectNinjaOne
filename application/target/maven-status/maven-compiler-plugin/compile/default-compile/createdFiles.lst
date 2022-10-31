@@ -1,0 +1,3 @@
+ninjaone\hexagonal\application\service\api\DeviceService.class
+ninjaone\hexagonal\application\service\adapter\DeviceServiceAdapter.class
+ninjaone\hexagonal\application\service\config\ApplicationConfiguration.class
