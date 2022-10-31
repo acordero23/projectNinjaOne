@@ -4,7 +4,7 @@ import ninjaone.hexagonal.domain.model.Device;
 
 public interface DeviceService {
 
-    void addProduct(Device device);
+    void addDevice(Device device);
 
     void removeDevice(Device device);
 

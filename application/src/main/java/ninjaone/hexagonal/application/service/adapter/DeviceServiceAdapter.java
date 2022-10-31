@@ -15,8 +15,8 @@ public class DeviceServiceAdapter implements DeviceService {
     }
 
     @Override
-    public void addProduct(Device device) {
-        devicePersistencePort.addProduct(device);
+    public void addDevice(Device device) {
+        devicePersistencePort.addDevice(device);
     }
 
     @Override

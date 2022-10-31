@@ -14,7 +14,7 @@ public class DeviceSpringJpaAdapter implements DevicePersistencePort {
     }
 
     @Override
-    public void addProduct(Device device) {
+    public void addDevice(Device device) {
         DeviceEntity deviceEntity = new DeviceEntity();
         deviceEntity.setSystemName(device.getSystemName());
         deviceEntity.setType(device.getType());

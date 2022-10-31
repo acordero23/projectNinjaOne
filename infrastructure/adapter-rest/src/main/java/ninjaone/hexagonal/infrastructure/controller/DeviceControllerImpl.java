@@ -44,7 +44,7 @@ public class DeviceControllerImpl implements DeviceController{
             if(deviceRegister != null)
                 return ResponseHandler.generateResponse("Device already exists", HttpStatus.CONFLICT, null);
 
-            deviceService.addProduct(device);
+            deviceService.addDevice(device);
 
             return ResponseHandler.generateResponse("Added Device", HttpStatus.CREATED, null);
         } catch (Exception error) {
