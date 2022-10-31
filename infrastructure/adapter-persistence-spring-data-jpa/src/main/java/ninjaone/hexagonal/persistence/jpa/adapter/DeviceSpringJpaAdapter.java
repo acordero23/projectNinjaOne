@@ -48,6 +48,13 @@ public class DeviceSpringJpaAdapter implements DevicePersistencePort {
         return this.getDevice(deviceEntity);
     }
 
+    @Override
+    public Device getDeviceBySystemName(String systemName) {
+        DeviceEntity deviceEntity = deviceRepository.findBySystemName(systemName);
+
+        return this.getDevice(deviceEntity);
+    }
+
     private Device getDevice(DeviceEntity deviceEntity) {
         if (deviceEntity == null) return null;
 

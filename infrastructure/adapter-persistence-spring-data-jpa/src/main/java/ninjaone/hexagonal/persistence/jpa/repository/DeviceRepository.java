@@ -6,4 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface DeviceRepository extends JpaRepository<DeviceEntity, Integer> {
 
     DeviceEntity findByDeviceId(Integer id);
+
+    DeviceEntity findBySystemName(String systemName);
 }

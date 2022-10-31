@@ -11,4 +11,6 @@ public interface DeviceService {
     void updateDevice(Device device);
 
     Device getDeviceById(Integer id);
+
+    Device getDeviceBySystemName(String systemName);
 }

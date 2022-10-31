@@ -25,7 +25,8 @@ public class DeviceControllerImpl implements DeviceController{
         try {
             var device = deviceService.getDeviceById(deviceId);
 
-            if(device == null) return ResponseHandler.generateResponse("Device not found", HttpStatus.NOT_FOUND, null);
+            if(device == null)
+                return ResponseHandler.generateResponse("Device not found", HttpStatus.NOT_FOUND, null);
 
             return ResponseHandler.generateResponse("Device found", HttpStatus.OK, deviceService.getDeviceById(deviceId));
         } catch (Exception error) {
@@ -38,9 +39,14 @@ public class DeviceControllerImpl implements DeviceController{
     public ResponseEntity<Object> addDevice(Device device) {
 
         try {
+            var deviceRegister = deviceService.getDeviceBySystemName(device.getSystemName());
+
+            if(deviceRegister != null)
+                return ResponseHandler.generateResponse("Device already exists", HttpStatus.CONFLICT, null);
+
             deviceService.addProduct(device);
 
-            return ResponseHandler.generateResponse("Added Device", HttpStatus.OK, null);
+            return ResponseHandler.generateResponse("Added Device", HttpStatus.CREATED, null);
         } catch (Exception error) {
             return ResponseHandler.generateResponse("There was an error adding the device",
                     HttpStatus.INTERNAL_SERVER_ERROR, null);
@@ -52,7 +58,8 @@ public class DeviceControllerImpl implements DeviceController{
         try {
             var deviceRegister = deviceService.getDeviceById(device.getDeviceId());
 
-            if(deviceRegister == null) return ResponseHandler.generateResponse("Device not found", HttpStatus.NOT_FOUND, null);
+            if(deviceRegister == null)
+                return ResponseHandler.generateResponse("Device not found", HttpStatus.NOT_FOUND, null);
 
             deviceService.removeDevice(device);
 
@@ -68,7 +75,8 @@ public class DeviceControllerImpl implements DeviceController{
         try {
             var deviceRegister = deviceService.getDeviceById(device.getDeviceId());
 
-            if(deviceRegister == null) return ResponseHandler.generateResponse("Device not found", HttpStatus.NOT_FOUND, null);
+            if(deviceRegister == null)
+                return ResponseHandler.generateResponse("Device not found", HttpStatus.NOT_FOUND, null);
 
             deviceService.updateDevice(device);
 

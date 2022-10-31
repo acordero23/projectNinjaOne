@@ -33,4 +33,9 @@ public class DeviceServiceAdapter implements DeviceService {
     public Device getDeviceById(Integer id) {
         return devicePersistencePort.getDeviceById(id);
     }
+
+    @Override
+    public Device getDeviceBySystemName(String systemName) {
+        return devicePersistencePort.getDeviceBySystemName(systemName);
+    }
 }
