@@ -7,9 +7,15 @@ import org.springframework.web.bind.annotation.*;
 
 public interface DeviceController {
 
-    @GetMapping("/device/{deviceId}")
+    @GetMapping("/{deviceId}")
     ResponseEntity<Object> getDeviceById(@PathVariable Integer deviceId);
 
-    @PostMapping(value = "/device", consumes = MediaType.APPLICATION_JSON_VALUE)
-    ResponseEntity<Object> addProduct(@RequestBody Device device);
+    @PostMapping(value = "/add", consumes = MediaType.APPLICATION_JSON_VALUE)
+    ResponseEntity<Object> addDevice(@RequestBody Device device);
+
+    @DeleteMapping(value = "/delete", consumes = MediaType.APPLICATION_JSON_VALUE)
+    ResponseEntity<Object> removeDevice(@RequestBody Device device);
+
+    @PutMapping(value = "/update", consumes = MediaType.APPLICATION_JSON_VALUE)
+    ResponseEntity<Object> updateDevice(@RequestBody Device device);
 }

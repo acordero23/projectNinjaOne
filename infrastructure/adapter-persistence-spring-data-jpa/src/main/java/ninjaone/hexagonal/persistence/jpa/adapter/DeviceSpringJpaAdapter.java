@@ -24,6 +24,24 @@ public class DeviceSpringJpaAdapter implements DevicePersistencePort {
     }
 
     @Override
+    public void removeDevice(Device device) {
+        DeviceEntity productEntity = new DeviceEntity();
+        BeanUtils.copyProperties(device, productEntity);
+
+        deviceRepository.delete(productEntity);
+    }
+
+    @Override
+    public void updateDevice(Device device) {
+        DeviceEntity deviceEntity = deviceRepository.findByDeviceId(device.getDeviceId());
+        deviceEntity.setSystemName(device.getSystemName());
+        deviceEntity.setType(device.getType());
+        deviceEntity.setCost(device.getCost());
+
+        deviceRepository.save(deviceEntity);
+    }
+
+    @Override
     public Device getDeviceById(Integer id) {
         DeviceEntity deviceEntity = deviceRepository.findByDeviceId(id);
 

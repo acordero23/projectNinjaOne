@@ -6,5 +6,9 @@ public interface DeviceService {
 
     void addProduct(Device device);
 
+    void removeDevice(Device device);
+
+    void updateDevice(Device device);
+
     Device getDeviceById(Integer id);
 }
