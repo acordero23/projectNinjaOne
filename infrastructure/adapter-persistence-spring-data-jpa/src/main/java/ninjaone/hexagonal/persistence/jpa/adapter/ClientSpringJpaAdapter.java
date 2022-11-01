@@ -9,9 +9,17 @@ import ninjaone.hexagonal.persistence.jpa.repository.ClientRepository;
 import ninjaone.hexagonal.persistence.jpa.repository.ContractRepository;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.List;
 
 public class ClientSpringJpaAdapter implements ClientPersistencePort {
+
+    @PersistenceContext
+    private EntityManager entityManager;
 
     private ClientRepository clientRepository;
     private ContractRepository contractRepository;
@@ -43,5 +51,35 @@ public class ClientSpringJpaAdapter implements ClientPersistencePort {
                 contractRepository.save(contractEntity);
             }
         }
+    }
+
+    @Override
+    public Client findByIdentification(String identificacion) {
+        ClientEntity clientEntity = clientRepository.findByIdentification(identificacion);
+
+        if (clientEntity == null) return null;
+
+        Client client = new Client();
+        client.setClientId(clientEntity.getClientId());
+        client.setClientName(clientEntity.getClientName());
+        client.setIdentification(clientEntity.getIdentification());
+
+        return client;
+    }
+
+    @Override
+    public BigDecimal getTotalMontly(Client client) {
+        BigDecimal sum = new BigDecimal(BigInteger.ZERO);
+
+        Query query = entityManager.createNativeQuery("SELECT SUM(CONTRACT.QUANTITY * ISNULL(SERVICES_COST.COST, DEVICES.COST)) as SUM " +
+                "FROM CONTRACT " +
+                "INNER JOIN SERVICES_COST ON CONTRACT.SERVICE_COST_ID = SERVICES_COST.ID " +
+                "INNER JOIN DEVICES ON SERVICES_COST.DEVICE_ID = DEVICES.ID " +
+                "WHERE CONTRACT.CLIENT_ID = ?");
+        query.setParameter(1, client.getClientId());
+
+        var result = query.getResultList();
+
+        return new BigDecimal(result.get(0).toString());
     }
 }

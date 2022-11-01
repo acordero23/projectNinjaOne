@@ -1,7 +1,6 @@
 package ninjaone.hexagonal.infrastructure.controller;
 
 import ninjaone.hexagonal.application.service.api.ClientService;
-import ninjaone.hexagonal.application.service.api.DeviceService;
 import ninjaone.hexagonal.application.service.api.ServiceCostService;
 import ninjaone.hexagonal.domain.model.Client;
 import ninjaone.hexagonal.domain.model.Contract;
@@ -11,6 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.math.BigDecimal;
 
 @RestController
 @RequestMapping("/client")
@@ -27,7 +28,15 @@ public class ClientControllerImpl implements ClientController {
 
     @Override
     public ResponseEntity<Object> getTotalMontly(String identification) {
-        return null;
+
+        try {
+            var clientRegister = clientService.findByIdentification(identification);
+            BigDecimal totalMontly = clientService.getTotalMontly(clientRegister);
+            return ResponseHandler.generateResponse("Sum total montly", HttpStatus.OK, totalMontly);
+        } catch (Exception erro) {
+            return ResponseHandler.generateResponse("There was an error getting the customer's monthly total",
+                    HttpStatus.INTERNAL_SERVER_ERROR, null);
+        }
     }
 
     @Override
