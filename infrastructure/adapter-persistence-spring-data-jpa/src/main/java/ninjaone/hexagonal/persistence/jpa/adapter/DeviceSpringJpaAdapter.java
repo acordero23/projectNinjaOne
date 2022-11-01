@@ -7,6 +7,7 @@ import ninjaone.hexagonal.persistence.jpa.repository.DeviceRepository;
 import org.springframework.beans.BeanUtils;
 
 public class DeviceSpringJpaAdapter implements DevicePersistencePort {
+
     private DeviceRepository deviceRepository;
 
     public DeviceSpringJpaAdapter(DeviceRepository deviceRepository) {

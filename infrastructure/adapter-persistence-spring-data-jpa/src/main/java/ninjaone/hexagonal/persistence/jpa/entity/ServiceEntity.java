@@ -1,13 +1,33 @@
-package ninjaone.hexagonal.domain.model;
+package ninjaone.hexagonal.persistence.jpa.entity;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 
-public class ServiceCost {
+@Entity
+@Table(name = "services_cost")
+public class ServiceEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Integer serviceCostId;
+
+    @Column(name = "service_name")
     private String serviceName;
+
+    @Column(name = "device_id")
     private Integer deviceId;
-    private String deviceName;
+
+    @Column(columnDefinition="Decimal(18,2)")
     private BigDecimal cost;
+
+    public ServiceEntity() {}
+
+    public ServiceEntity(String serviceName, BigDecimal cost) {
+        super();
+        this.serviceName = serviceName;
+        this.cost = cost;
+    }
 
     public Integer getServiceCostId() {
         return serviceCostId;
@@ -31,14 +51,6 @@ public class ServiceCost {
 
     public void setDeviceId(Integer deviceId) {
         this.deviceId = deviceId;
-    }
-
-    public String getDeviceName() {
-        return deviceName;
-    }
-
-    public void setDeviceName(String deviceName) {
-        this.deviceName = deviceName;
     }
 
     public BigDecimal getCost() {

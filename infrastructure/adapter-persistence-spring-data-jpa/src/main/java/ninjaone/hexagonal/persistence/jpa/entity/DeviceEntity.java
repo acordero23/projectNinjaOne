@@ -21,6 +21,15 @@ public class DeviceEntity {
     @Column(columnDefinition="Decimal(18,2)")
     private BigDecimal cost;
 
+    public DeviceEntity() {}
+
+    public DeviceEntity(String systemName, String type, BigDecimal cost) {
+        super();
+        this.systemName = systemName;
+        this.type = type;
+        this.cost = cost;
+    }
+
     public Integer getDeviceId() {
         return deviceId;
     }

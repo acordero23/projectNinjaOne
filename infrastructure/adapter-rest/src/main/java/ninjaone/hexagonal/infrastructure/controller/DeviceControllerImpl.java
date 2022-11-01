@@ -1,6 +1,7 @@
 package ninjaone.hexagonal.infrastructure.controller;
 
 import ninjaone.hexagonal.application.service.api.DeviceService;
+import ninjaone.hexagonal.application.service.api.ServiceCostService;
 import ninjaone.hexagonal.domain.model.Device;
 import ninjaone.hexagonal.infrastructure.response.ResponseHandler;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,11 +14,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/device")
 public class DeviceControllerImpl implements DeviceController{
 
+    private ServiceCostService serviceCostService;
     private DeviceService deviceService;
 
     @Autowired
-    public DeviceControllerImpl(DeviceService deviceService) {
+    public DeviceControllerImpl(DeviceService deviceService, ServiceCostService serviceCostService) {
         this.deviceService = deviceService;
+        this.serviceCostService = serviceCostService;
     }
 
     @Override
@@ -56,6 +59,11 @@ public class DeviceControllerImpl implements DeviceController{
     @Override
     public ResponseEntity<Object> removeDevice(Device device) {
         try {
+            var cantDevicesRelatedToAService = serviceCostService.findAllDevicesRelatedToAService(device.getDeviceId());
+
+            if(cantDevicesRelatedToAService != 0)
+                return ResponseHandler.generateResponse("Service related device", HttpStatus.BAD_REQUEST, null);
+
             var deviceRegister = deviceService.getDeviceById(device.getDeviceId());
 
             if(deviceRegister == null)
