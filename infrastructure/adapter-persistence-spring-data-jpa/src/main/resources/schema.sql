@@ -28,3 +28,11 @@ CREATE TABLE contract (
     service_cost_id INT NOT NULL REFERENCES services_cost (id),
     quantity INT NOT NULL
 );
+
+DROP TABLE IF EXISTS user_authenticate;
+CREATE TABLE user_authenticate (
+    id INT PRIMARY KEY auto_increment,
+    name VARCHAR(150) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    password VARCHAR(150)
+);
