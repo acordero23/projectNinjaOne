@@ -9,4 +9,6 @@ public interface ServiceCostService {
     void removeService(ServiceCost service);
 
     Integer findAllDevicesRelatedToAService(Integer deviceId);
+
+    ServiceCost findByServiceName(String serviceName);
 }

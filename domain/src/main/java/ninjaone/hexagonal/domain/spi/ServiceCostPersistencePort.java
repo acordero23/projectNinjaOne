@@ -8,4 +8,6 @@ public interface ServiceCostPersistencePort {
     void removeService(ServiceCost device);
 
     Integer findAllDevicesRelatedToAService(Integer serviceId);
+
+    ServiceCost findByServiceName(String serviceName);
 }

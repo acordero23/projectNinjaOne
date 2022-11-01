@@ -27,9 +27,12 @@ public class ServiceCostControllerImpl implements ServiceCostController{
     public ResponseEntity<Object> addService(ServiceCost service) {
         try {
             var deviceRegister = deviceService.getDeviceBySystemName(service.getDeviceName());
-
             if(deviceRegister == null)
                 return ResponseHandler.generateResponse("Device specifid not found", HttpStatus.NOT_FOUND, null);
+
+            var serviceRegister = serviceCostService.findByServiceName(service.getServiceName());
+            if(serviceRegister != null)
+                return ResponseHandler.generateResponse("Service already exists", HttpStatus.CONFLICT, null);
 
             service.setDeviceId(deviceRegister.getDeviceId());
 

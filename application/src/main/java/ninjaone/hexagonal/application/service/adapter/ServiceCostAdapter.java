@@ -28,4 +28,9 @@ public class ServiceCostAdapter implements ServiceCostService {
     public Integer findAllDevicesRelatedToAService(Integer serviceId) {
         return serviceCostPersistencePort.findAllDevicesRelatedToAService(serviceId);
     }
+
+    @Override
+    public ServiceCost findByServiceName(String serviceName) {
+        return serviceCostPersistencePort.findByServiceName(serviceName);
+    }
 }

@@ -44,4 +44,19 @@ public class ServiceCostSpringJpaAdapter  implements ServiceCostPersistencePort 
 
         return result.size();
     }
+
+    @Override
+    public ServiceCost findByServiceName(String serviceName) {
+        ServiceEntity serviceEntity = serviceRepository.findByServiceName(serviceName);
+
+        if (serviceEntity == null) return null;
+
+        ServiceCost serviceCost = new ServiceCost();
+        serviceCost.setServiceCostId(serviceEntity.getServiceCostId());
+        serviceCost.setServiceName(serviceEntity.getServiceName());
+        serviceCost.setDeviceId(serviceEntity.getDeviceId());
+        serviceCost.setCost(serviceEntity.getCost());
+
+        return serviceCost;
+    }
 }
