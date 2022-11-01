@@ -4,6 +4,7 @@ import ninjaone.hexagonal.domain.model.ServiceCost;
 import ninjaone.hexagonal.domain.spi.ServiceCostPersistencePort;
 import ninjaone.hexagonal.persistence.jpa.entity.ServiceEntity;
 import ninjaone.hexagonal.persistence.jpa.repository.ServiceRepository;
+import org.springframework.beans.BeanUtils;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -31,8 +32,11 @@ public class ServiceCostSpringJpaAdapter  implements ServiceCostPersistencePort 
     }
 
     @Override
-    public void removeService(ServiceCost device) {
+    public void removeService(ServiceCost service) {
+        ServiceEntity serviceEntity = new ServiceEntity();
+        BeanUtils.copyProperties(service, serviceEntity);
 
+        serviceRepository.delete(serviceEntity);
     }
 
     @Override

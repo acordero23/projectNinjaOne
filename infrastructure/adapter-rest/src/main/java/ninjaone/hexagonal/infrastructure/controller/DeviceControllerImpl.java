@@ -40,7 +40,6 @@ public class DeviceControllerImpl implements DeviceController{
 
     @Override
     public ResponseEntity<Object> addDevice(Device device) {
-
         try {
             var deviceRegister = deviceService.getDeviceBySystemName(device.getSystemName());
 

@@ -47,6 +47,13 @@ public class ServiceCostControllerImpl implements ServiceCostController{
 
     @Override
     public ResponseEntity<Object> removeService(ServiceCost service) {
-        return null;
+        try {
+            serviceCostService.removeService(service);
+
+            return ResponseHandler.generateResponse("Removed Service", HttpStatus.OK, null);
+        } catch (Exception error) {
+            return ResponseHandler.generateResponse("There was an error removing the service",
+                    HttpStatus.INTERNAL_SERVER_ERROR, null);
+        }
     }
 }
