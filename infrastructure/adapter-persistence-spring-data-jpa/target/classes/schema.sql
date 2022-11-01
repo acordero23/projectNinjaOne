@@ -24,7 +24,7 @@ CREATE TABLE clients (
 DROP TABLE IF EXISTS contract;
 CREATE TABLE contract (
     id INT PRIMARY KEY auto_increment,
-    cliente_id INT NOT NULL REFERENCES clients (id),
+    client_id INT NOT NULL REFERENCES clients (id),
     service_cost_id INT NOT NULL REFERENCES services_cost (id),
     quantity INT NOT NULL
 );
