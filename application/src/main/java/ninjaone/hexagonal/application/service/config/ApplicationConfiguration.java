@@ -1,12 +1,15 @@
 package ninjaone.hexagonal.application.service.config;
 
 import ninjaone.hexagonal.application.service.adapter.ClientServiceAdapter;
+import ninjaone.hexagonal.application.service.adapter.ContractServiceAdapter;
 import ninjaone.hexagonal.application.service.adapter.DeviceServiceAdapter;
 import ninjaone.hexagonal.application.service.adapter.ServiceCostAdapter;
 import ninjaone.hexagonal.application.service.api.ClientService;
+import ninjaone.hexagonal.application.service.api.ContractService;
 import ninjaone.hexagonal.application.service.api.DeviceService;
 import ninjaone.hexagonal.application.service.api.ServiceCostService;
 import ninjaone.hexagonal.domain.spi.ClientPersistencePort;
+import ninjaone.hexagonal.domain.spi.ContractPersistencePort;
 import ninjaone.hexagonal.domain.spi.DevicePersistencePort;
 import ninjaone.hexagonal.domain.spi.ServiceCostPersistencePort;
 import org.springframework.context.annotation.Bean;
@@ -27,5 +30,10 @@ public class ApplicationConfiguration {
     @Bean
     public ClientService getClientService(ClientPersistencePort clientPersistencePort) {
         return new ClientServiceAdapter(clientPersistencePort);
+    }
+
+    @Bean
+    public ContractService getContractService(ContractPersistencePort contractPersistencePort) {
+        return new ContractServiceAdapter(contractPersistencePort);
     }
 }

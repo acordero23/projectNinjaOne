@@ -1,12 +1,24 @@
-package ninjaone.hexagonal.domain.model;
+package ninjaone.hexagonal.persistence.jpa.entity;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 
-public class Contract {
+@Entity
+@Table(name = "contract")
+public class ContractEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Integer contractId;
+
+    @Column(name = "client_id")
     private Integer clientId;
+
+    @Column(name = "service_cost_id")
     private Integer serviceCostId;
-    private String serviceName;
+
+    @Column(name = "quantity")
     private BigDecimal quantity;
 
     public Integer getContractId() {
@@ -31,14 +43,6 @@ public class Contract {
 
     public void setServiceCostId(Integer serviceCostId) {
         this.serviceCostId = serviceCostId;
-    }
-
-    public String getServiceName() {
-        return serviceName;
-    }
-
-    public void setServiceName(String serviceName) {
-        this.serviceName = serviceName;
     }
 
     public BigDecimal getQuantity() {
