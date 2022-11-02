@@ -1,2 +1,8 @@
 # JetBrains IDE
 .idea/
+.idea/workspace.xml
+
+# Maven
+target/
+dist/
+log/
