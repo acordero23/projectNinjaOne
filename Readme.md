@@ -39,6 +39,7 @@ http://localhost:8080/device/update
 }
 
 Endpoint Service
+
 POST
 http://localhost:8080/service/add
 {
@@ -54,11 +55,12 @@ http://localhost:8080/service/delete
 }
 
 Endpoint Client
+
 POST
 http://localhost:8080/client/add
 {
-    "clientName": "Alejandro Cordero",
-    "identification": "0931114631",
+    "clientName": "Raúl Castillo",
+    "identification": "0978579456",
     "services" : [
         {
             "serviceName": "Each Device",
