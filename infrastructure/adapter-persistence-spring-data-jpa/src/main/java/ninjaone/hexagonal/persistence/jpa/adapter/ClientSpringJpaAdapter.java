@@ -71,7 +71,7 @@ public class ClientSpringJpaAdapter implements ClientPersistencePort {
     public BigDecimal getTotalMontly(Client client) {
         BigDecimal sum = new BigDecimal(BigInteger.ZERO);
 
-        Query query = entityManager.createNativeQuery("SELECT SUM(CONTRACT.QUANTITY * ISNULL(SERVICES_COST.COST, DEVICES.COST)) as SUM " +
+        Query query = entityManager.createNativeQuery("SELECT SUM(CONTRACT.QUANTITY * COALESCE(SERVICES_COST.COST, DEVICES.COST)) as SUM " +
                 "FROM CONTRACT " +
                 "INNER JOIN SERVICES_COST ON CONTRACT.SERVICE_COST_ID = SERVICES_COST.ID " +
                 "INNER JOIN DEVICES ON SERVICES_COST.DEVICE_ID = DEVICES.ID " +
