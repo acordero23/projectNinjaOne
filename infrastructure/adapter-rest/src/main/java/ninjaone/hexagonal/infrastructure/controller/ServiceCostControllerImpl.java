@@ -48,6 +48,10 @@ public class ServiceCostControllerImpl implements ServiceCostController{
     @Override
     public ResponseEntity<Object> removeService(ServiceCost service) {
         try {
+            var serviceRegister = serviceCostService.findByServiceCostId(service.getServiceCostId());
+            if(serviceRegister == null)
+                return ResponseHandler.generateResponse("Service not found", HttpStatus.NOT_FOUND, null);
+
             serviceCostService.removeService(service);
 
             return ResponseHandler.generateResponse("Removed Service", HttpStatus.OK, null);

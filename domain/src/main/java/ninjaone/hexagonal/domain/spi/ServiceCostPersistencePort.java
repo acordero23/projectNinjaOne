@@ -10,4 +10,6 @@ public interface ServiceCostPersistencePort {
     Integer findAllDevicesRelatedToAService(Integer serviceId);
 
     ServiceCost findByServiceName(String serviceName);
+
+    ServiceCost findByServiceCostId(Integer serviceId);
 }

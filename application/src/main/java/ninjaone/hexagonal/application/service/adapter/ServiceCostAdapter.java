@@ -33,4 +33,9 @@ public class ServiceCostAdapter implements ServiceCostService {
     public ServiceCost findByServiceName(String serviceName) {
         return serviceCostPersistencePort.findByServiceName(serviceName);
     }
+
+    @Override
+    public ServiceCost findByServiceCostId(Integer serviceId) {
+        return serviceCostPersistencePort.findByServiceCostId(serviceId);
+    }
 }

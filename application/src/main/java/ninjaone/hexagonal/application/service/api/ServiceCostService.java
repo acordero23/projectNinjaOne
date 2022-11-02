@@ -11,4 +11,6 @@ public interface ServiceCostService {
     Integer findAllDevicesRelatedToAService(Integer deviceId);
 
     ServiceCost findByServiceName(String serviceName);
+
+    ServiceCost findByServiceCostId(Integer serviceId);
 }
