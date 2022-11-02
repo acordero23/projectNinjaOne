@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "d8b95a94-8fb9-4a73-b45b-45ca0630e9f5",
+		"name": "pruebaTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17127380"
+	},
+	"item": [
+		{
+			"name": "addClient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"clientName\": \"Alejandro Cordero\",\r\n\t\"identification\": \"0931114631\",\r\n\t\"services\" : [\r\n\t\t{\r\n\t\t\t\"serviceName\": \"Each Device\",\r\n\t\t\t\"quantity\": 5\r\n\t\t},\r\n        {\r\n\t\t\t\"serviceName\": \"Antivirus Windows\",\r\n\t\t\t\"quantity\": 2\r\n\t\t},\r\n        {\r\n\t\t\t\"serviceName\": \"Antivirus Mac\",\r\n\t\t\t\"quantity\": 3\r\n\t\t},\r\n        {\r\n\t\t\t\"serviceName\": \"Backup\",\r\n\t\t\t\"quantity\": 5\r\n\t\t},\r\n        {\r\n\t\t\t\"serviceName\": \"Screen Share\",\r\n\t\t\t\"quantity\": 5\r\n\t\t}\r\n\t]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/client/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTotalMontlyClient",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGVqYW5kcm9jb3JkZXJvbTIzQGdtYWlsLmNvbSIsImV4cCI6MTY2NzM0NTQyMSwibm9tYnJlIjoiQWxlamFuZHJvIENvcmRlcm8ifQ.pFAK035_22aM7CgDraTsIUr2bdsPjs2WPpjDOQWr220",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/client/totalMontly/0931114635",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client",
+						"totalMontly",
+						"0931114635"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addDevice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"systemName\": \"PruebaDevice\",\r\n    \"type\": \"PruebaDevice\",\r\n    \"cost\": 5.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/device/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDevice",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGVqYW5kcm9jb3JkZXJvbTIzQGdtYWlsLmNvbSIsImV4cCI6MTY2NzM0NTQyMSwibm9tYnJlIjoiQWxlamFuZHJvIENvcmRlcm8ifQ.pFAK035_22aM7CgDraTsIUr2bdsPjs2WPpjDOQWr220",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/device/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteDevice",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deviceId\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/device/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateDevice",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deviceId\": 4,\r\n    \"systemName\": \"PruebaDeviceUpdate\",\r\n    \"type\": \"PruebaDeviceUpdate\",\r\n    \"cost\": 10.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/device/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteService",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serviceCostId\": 7\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/service/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"service",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addService",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serviceName\": \"servicePrueba1\",\r\n    \"deviceName\": \"Windows Server\",\r\n    \"cost\": 5.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/service/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"service",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"alejandrocorderom23@gmail.com\",\r\n    \"password\": \"alejo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
