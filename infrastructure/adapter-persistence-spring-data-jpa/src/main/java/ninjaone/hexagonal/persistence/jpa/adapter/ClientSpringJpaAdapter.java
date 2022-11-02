@@ -13,7 +13,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.List;
 
 public class ClientSpringJpaAdapter implements ClientPersistencePort {
@@ -69,8 +68,6 @@ public class ClientSpringJpaAdapter implements ClientPersistencePort {
 
     @Override
     public BigDecimal getTotalMontly(Client client) {
-        BigDecimal sum = new BigDecimal(BigInteger.ZERO);
-
         Query query = entityManager.createNativeQuery("SELECT SUM(CONTRACT.QUANTITY * COALESCE(SERVICES_COST.COST, DEVICES.COST)) as SUM " +
                 "FROM CONTRACT " +
                 "INNER JOIN SERVICES_COST ON CONTRACT.SERVICE_COST_ID = SERVICES_COST.ID " +
