@@ -1,0 +1,16 @@
+ninjaone\hexagonal\persistence\jpa\repository\ClientRepository.class
+ninjaone\hexagonal\persistence\jpa\entity\ServiceEntity.class
+ninjaone\hexagonal\persistence\jpa\repository\UserRepository.class
+ninjaone\hexagonal\persistence\jpa\repository\ContractRepository.class
+ninjaone\hexagonal\persistence\jpa\adapter\ServiceCostSpringJpaAdapter.class
+ninjaone\hexagonal\persistence\jpa\entity\ContractEntity.class
+ninjaone\hexagonal\persistence\jpa\adapter\ClientSpringJpaAdapter.class
+ninjaone\hexagonal\persistence\jpa\entity\ClientEntity.class
+ninjaone\hexagonal\persistence\jpa\repository\DeviceRepository.class
+ninjaone\hexagonal\persistence\jpa\adapter\UserSpringJpaAdapter.class
+ninjaone\hexagonal\persistence\jpa\config\SpringDataJpaAdapterConfiguration.class
+ninjaone\hexagonal\persistence\jpa\adapter\ContractSpringJpaAdapter.class
+ninjaone\hexagonal\persistence\jpa\adapter\DeviceSpringJpaAdapter.class
+ninjaone\hexagonal\persistence\jpa\entity\DeviceEntity.class
+ninjaone\hexagonal\persistence\jpa\entity\UserEntity.class
+ninjaone\hexagonal\persistence\jpa\repository\ServiceRepository.class

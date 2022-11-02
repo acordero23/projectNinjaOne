@@ -1,2 +1,11 @@
+ninjaone\hexagonal\domain\model\ServiceCost.class
 ninjaone\hexagonal\domain\model\Device.class
+ninjaone\hexagonal\domain\model\User.class
+ninjaone\hexagonal\domain\model\Response.class
+ninjaone\hexagonal\domain\spi\ContractPersistencePort.class
+ninjaone\hexagonal\domain\spi\ServiceCostPersistencePort.class
 ninjaone\hexagonal\domain\spi\DevicePersistencePort.class
+ninjaone\hexagonal\domain\model\Client.class
+ninjaone\hexagonal\domain\spi\UserPersistencePort.class
+ninjaone\hexagonal\domain\model\Contract.class
+ninjaone\hexagonal\domain\spi\ClientPersistencePort.class

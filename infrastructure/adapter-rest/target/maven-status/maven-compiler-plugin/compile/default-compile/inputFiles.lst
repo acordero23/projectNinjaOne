@@ -1,0 +1,14 @@
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-rest\src\main\java\ninjaone\hexagonal\infrastructure\controller\DeviceControllerImpl.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-rest\src\main\java\ninjaone\hexagonal\infrastructure\controller\ClientController.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-rest\src\main\java\ninjaone\hexagonal\infrastructure\security\UserDetailsImpl.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-rest\src\main\java\ninjaone\hexagonal\infrastructure\controller\ServiceCostController.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-rest\src\main\java\ninjaone\hexagonal\infrastructure\security\WebSecurityConfig.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-rest\src\main\java\ninjaone\hexagonal\infrastructure\controller\ClientControllerImpl.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-rest\src\main\java\ninjaone\hexagonal\infrastructure\security\TokenUtils.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-rest\src\main\java\ninjaone\hexagonal\infrastructure\security\JWTAuthorizationFilter.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-rest\src\main\java\ninjaone\hexagonal\infrastructure\security\AuthCredentials.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-rest\src\main\java\ninjaone\hexagonal\infrastructure\security\JWTAuthenticationFilter.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-rest\src\main\java\ninjaone\hexagonal\infrastructure\security\UserDetailServiceImpl.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-rest\src\main\java\ninjaone\hexagonal\infrastructure\controller\ServiceCostControllerImpl.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-rest\src\main\java\ninjaone\hexagonal\infrastructure\controller\DeviceController.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-rest\src\main\java\ninjaone\hexagonal\infrastructure\response\ResponseHandler.java

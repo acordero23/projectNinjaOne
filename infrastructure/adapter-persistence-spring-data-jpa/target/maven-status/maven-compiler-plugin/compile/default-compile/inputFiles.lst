@@ -1,0 +1,16 @@
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-persistence-spring-data-jpa\src\main\java\ninjaone\hexagonal\persistence\jpa\entity\UserEntity.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-persistence-spring-data-jpa\src\main\java\ninjaone\hexagonal\persistence\jpa\entity\ContractEntity.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-persistence-spring-data-jpa\src\main\java\ninjaone\hexagonal\persistence\jpa\entity\ServiceEntity.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-persistence-spring-data-jpa\src\main\java\ninjaone\hexagonal\persistence\jpa\adapter\DeviceSpringJpaAdapter.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-persistence-spring-data-jpa\src\main\java\ninjaone\hexagonal\persistence\jpa\repository\ContractRepository.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-persistence-spring-data-jpa\src\main\java\ninjaone\hexagonal\persistence\jpa\entity\ClientEntity.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-persistence-spring-data-jpa\src\main\java\ninjaone\hexagonal\persistence\jpa\repository\ClientRepository.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-persistence-spring-data-jpa\src\main\java\ninjaone\hexagonal\persistence\jpa\repository\DeviceRepository.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-persistence-spring-data-jpa\src\main\java\ninjaone\hexagonal\persistence\jpa\adapter\ContractSpringJpaAdapter.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-persistence-spring-data-jpa\src\main\java\ninjaone\hexagonal\persistence\jpa\adapter\ClientSpringJpaAdapter.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-persistence-spring-data-jpa\src\main\java\ninjaone\hexagonal\persistence\jpa\config\SpringDataJpaAdapterConfiguration.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-persistence-spring-data-jpa\src\main\java\ninjaone\hexagonal\persistence\jpa\adapter\UserSpringJpaAdapter.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-persistence-spring-data-jpa\src\main\java\ninjaone\hexagonal\persistence\jpa\repository\ServiceRepository.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-persistence-spring-data-jpa\src\main\java\ninjaone\hexagonal\persistence\jpa\repository\UserRepository.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-persistence-spring-data-jpa\src\main\java\ninjaone\hexagonal\persistence\jpa\entity\DeviceEntity.java
+C:\projectNinjaOne\hexagonal-architecture-poc\infrastructure\adapter-persistence-spring-data-jpa\src\main\java\ninjaone\hexagonal\persistence\jpa\adapter\ServiceCostSpringJpaAdapter.java

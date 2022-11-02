@@ -1,2 +1,11 @@
+C:\projectNinjaOne\hexagonal-architecture-poc\domain\src\main\java\ninjaone\hexagonal\domain\model\User.java
+C:\projectNinjaOne\hexagonal-architecture-poc\domain\src\main\java\ninjaone\hexagonal\domain\model\Response.java
+C:\projectNinjaOne\hexagonal-architecture-poc\domain\src\main\java\ninjaone\hexagonal\domain\spi\ContractPersistencePort.java
+C:\projectNinjaOne\hexagonal-architecture-poc\domain\src\main\java\ninjaone\hexagonal\domain\model\Contract.java
+C:\projectNinjaOne\hexagonal-architecture-poc\domain\src\main\java\ninjaone\hexagonal\domain\model\Client.java
+C:\projectNinjaOne\hexagonal-architecture-poc\domain\src\main\java\ninjaone\hexagonal\domain\spi\ServiceCostPersistencePort.java
+C:\projectNinjaOne\hexagonal-architecture-poc\domain\src\main\java\ninjaone\hexagonal\domain\spi\ClientPersistencePort.java
 C:\projectNinjaOne\hexagonal-architecture-poc\domain\src\main\java\ninjaone\hexagonal\domain\spi\DevicePersistencePort.java
+C:\projectNinjaOne\hexagonal-architecture-poc\domain\src\main\java\ninjaone\hexagonal\domain\spi\UserPersistencePort.java
+C:\projectNinjaOne\hexagonal-architecture-poc\domain\src\main\java\ninjaone\hexagonal\domain\model\ServiceCost.java
 C:\projectNinjaOne\hexagonal-architecture-poc\domain\src\main\java\ninjaone\hexagonal\domain\model\Device.java

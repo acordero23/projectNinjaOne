@@ -1,3 +1,11 @@
+C:\projectNinjaOne\hexagonal-architecture-poc\application\src\main\java\ninjaone\hexagonal\application\service\api\ServiceCostService.java
 C:\projectNinjaOne\hexagonal-architecture-poc\application\src\main\java\ninjaone\hexagonal\application\service\config\ApplicationConfiguration.java
 C:\projectNinjaOne\hexagonal-architecture-poc\application\src\main\java\ninjaone\hexagonal\application\service\adapter\DeviceServiceAdapter.java
 C:\projectNinjaOne\hexagonal-architecture-poc\application\src\main\java\ninjaone\hexagonal\application\service\api\DeviceService.java
+C:\projectNinjaOne\hexagonal-architecture-poc\application\src\main\java\ninjaone\hexagonal\application\service\api\UserService.java
+C:\projectNinjaOne\hexagonal-architecture-poc\application\src\main\java\ninjaone\hexagonal\application\service\adapter\ContractServiceAdapter.java
+C:\projectNinjaOne\hexagonal-architecture-poc\application\src\main\java\ninjaone\hexagonal\application\service\api\ContractService.java
+C:\projectNinjaOne\hexagonal-architecture-poc\application\src\main\java\ninjaone\hexagonal\application\service\adapter\ClientServiceAdapter.java
+C:\projectNinjaOne\hexagonal-architecture-poc\application\src\main\java\ninjaone\hexagonal\application\service\adapter\ServiceCostAdapter.java
+C:\projectNinjaOne\hexagonal-architecture-poc\application\src\main\java\ninjaone\hexagonal\application\service\adapter\UserServiceAdapter.java
+C:\projectNinjaOne\hexagonal-architecture-poc\application\src\main\java\ninjaone\hexagonal\application\service\api\ClientService.java

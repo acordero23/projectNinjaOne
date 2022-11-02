@@ -1,3 +1,11 @@
-ninjaone\hexagonal\application\service\api\DeviceService.class
-ninjaone\hexagonal\application\service\adapter\DeviceServiceAdapter.class
+ninjaone\hexagonal\application\service\adapter\ClientServiceAdapter.class
+ninjaone\hexagonal\application\service\api\ServiceCostService.class
+ninjaone\hexagonal\application\service\adapter\UserServiceAdapter.class
 ninjaone\hexagonal\application\service\config\ApplicationConfiguration.class
+ninjaone\hexagonal\application\service\adapter\ServiceCostAdapter.class
+ninjaone\hexagonal\application\service\adapter\DeviceServiceAdapter.class
+ninjaone\hexagonal\application\service\api\ContractService.class
+ninjaone\hexagonal\application\service\api\UserService.class
+ninjaone\hexagonal\application\service\api\ClientService.class
+ninjaone\hexagonal\application\service\adapter\ContractServiceAdapter.class
+ninjaone\hexagonal\application\service\api\DeviceService.class
