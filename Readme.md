@@ -4,7 +4,9 @@ In the project there is a collection to import with examples of the endpoints.
 
 Run the BootloaderApplication class
 
-Go to http://localhost:8080/token to generate the token
+Go to http://localhost:8080/token to generate, the Bearer generated will be attached directly to the headers.
+
+![img.png](img.png)
 
 In the header of each enpoint the generated token must be assigned, the duration of the same has a time of 20 minutes
 
